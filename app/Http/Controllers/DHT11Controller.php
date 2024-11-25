@@ -17,7 +17,7 @@ class DHT11Controller extends Controller
         return response()->json(["data" => $data]);
     }
 
-    public function FunctionName($temperature, $humidity) {
+    public function uploadData($temperature, $humidity) {
         $data = DHT11::where('id', 1)->update([
             'temperature' => $temperature,
             'humidity' => $humidity,
