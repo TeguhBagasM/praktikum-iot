@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\DashboardController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LedController;
 use App\Http\Controllers\DHT11Controller;
@@ -23,3 +24,6 @@ Route::get('/rfid/checkUser/', [WebiotController::class, 'checkUser']);
 Route::get('/Dht11', [DHT11Controller::class, 'index']);
 Route::get('/Dht11/getdata', [DHT11Controller::class, 'getdata']);
 Route::get('/Dht11/uploaddata/{temperature}/{humidity}', [DHT11Controller::class, 'uploadData']);
+
+
+Route::get('dashboard', [DashboardController::class, 'index']);
